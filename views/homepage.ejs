@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('/partials/navbar') %>
+    <!-- output tag-->
+    <h1>Welcome to my website</h1>
+    <p>wlcome <%= username %> </p>
+    <p>grade <%= grade %> </p>
+    <!-- scriplet tag js logic in ejs (for loops and if statment)-->
+    <% if(grade >= 80){ %>
+        <p>you are passing</p>
+    <% }else{ %>
+        <p>your grade under 80</p>
+    <% } %>
+    <h2>Coures</h2>
+    <ol>
+    <% for(let oneCoures of courses){ %>
+        <li><%= oneCoures %></li> 
+    <% } %>        
+    </ol>
+</body>
+</html>
